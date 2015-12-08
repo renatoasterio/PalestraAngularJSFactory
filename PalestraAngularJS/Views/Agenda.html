@@ -1,0 +1,121 @@
+﻿<!--
+    Autor: Renato Asterio
+    Data: 08/12/2015
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body ng-app="app">
+	<!-- Cabeçalho da página -->
+    <header></header>
+
+	<!-- Conteudo principal da página -->
+    <section class="container" ng-controller="agendaCtrl">
+
+        <p>
+            <h4>Agenda de eventos.</h4>
+        </p>
+
+		<!-- Alertas de forma dinamica -->
+        <div class="alert alert-{{classe}}" ng-show="ExibeAlert">
+            <a href="#" class="close" aria-label="close" ng-click="FecharAlert()">&times;</a>
+            <strong>{{mensagem}}</strong>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <label>Nome do evento:</label>
+                <input type="text" ng-model="Evento" class="form-control input-sm" />
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-sm-6">
+                <label>Estado:</label>
+                <select class="form-control input-sm"
+                        ng-model="Estado"
+                        ng-options="item as item.Nome for item in estados"
+                        ng-change="CarregarCidades()">
+                    <option value="">Selecione</option>
+                </select>
+            </div>
+
+            <div class="col-sm-6 form-group">
+                <label>Cidade:</label>
+                <select class="form-control input-sm"
+                        ng-model="Cidade"
+                        ng-options="item as item.Nome for item in cidades"
+                        ng-disabled="cidades.length == 0">
+                    <option value="">Selecione</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-sm-4">
+                <button type="button" class="btn btn-primary" ng-click="AdicionarAgenda()">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead style="background-color: rgb(25,117,216); color:white">
+                        <tr>
+                            <th>Id</th>
+                            <th>Nome</th>
+                            <th>Estado</th>
+							<th>Cidade</th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <input class="form-control input-sm" ng-model="filtro.Id" />
+                            </th>
+                            <th>
+                                <input class="form-control input-sm" ng-model="filtro.Nome" />
+                            </th>
+                            <th>
+                                <input class="form-control input-sm" ng-model="filtro.Cidade" />
+                            </th>
+							<th>
+                                <input class="form-control input-sm" ng-model="filtro.Estado" />
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody ng-repeat="item in agendas | filter:{Id: filtro.Id, Nome: filtro.Nome, Estado: filtro.Estado, Cidade: filtro.Cidade}">
+                        <tr>
+                            <td>{{item.Id}}</td>
+                            <td>{{item.Nome}}</td>
+                            <td>{{item.Cidade}}</td>
+							<td>{{item.Estado}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+	<!-- Rodapé da página -->
+    <footer>
+        &copy; Todos os direitos reservados ao NetCoders.
+	</footer>
+
+    <!-- Script dos frameworks -->
+    <script src="../Scripts/angular.min.js"></script>
+    <script src="../Scripts/angular-animate.min.js"></script>
+    <script src="../Scripts/jquery-1.9.1.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+	
+	<!-- Scripts da nossa APP -->
+    <script src="../App/AppConfig.js"></script>
+    <script src="../App/Controllers/AgendaController.js"></script>
+    <script src="../App/Resources/AgendaFactory.js"></script>
+    <script src="../App/Extra.js"></script>
+</body>
+</html>

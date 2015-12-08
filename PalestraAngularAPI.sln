@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{37FE599A-73B5-415F-AE21-2396FC26C1C5}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PalestraAngularJS", "PalestraAngularJS\", "{E42E267A-6C30-4684-9E1C-3763AFB7BF52}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_13358"
+		Debug.AspNetCompiler.PhysicalPath = "PalestraAngularJS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_13358\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_13358"
+		Release.AspNetCompiler.PhysicalPath = "PalestraAngularJS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_13358\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "13358"
+		SlnRelativePath = "PalestraAngularJS\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37FE599A-73B5-415F-AE21-2396FC26C1C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37FE599A-73B5-415F-AE21-2396FC26C1C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37FE599A-73B5-415F-AE21-2396FC26C1C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37FE599A-73B5-415F-AE21-2396FC26C1C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E42E267A-6C30-4684-9E1C-3763AFB7BF52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E42E267A-6C30-4684-9E1C-3763AFB7BF52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E42E267A-6C30-4684-9E1C-3763AFB7BF52}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{E42E267A-6C30-4684-9E1C-3763AFB7BF52}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
